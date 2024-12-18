@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Add Visitor"
+        android:textAlignment="center"
+        android:textColor="#6F6E6E"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="#2196F3"
+        android:hint="FirstName"
+        android:id="@+id/fname"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textColorHint="#FFFFFF"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="#2196F3"
+        android:hint="LastName"
+        android:id="@+id/lname"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textColorHint="#FFFFFF"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="#2196F3"
+        android:hint="Purpose"
+        android:id="@+id/purpose"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textColorHint="#FFFFFF"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="#2196F3"
+        android:hint="WhomToMeet"
+        android:id="@+id/wtm"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:textColorHint="#FFFFFF"
+
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#3F51B5"
+        android:text="Sumbit"
+        android:id="@+id/submit"
+        android:textColor="#FFFFFF"
+
+
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#3F51B5"
+        android:text="Go to Login"
+        android:id="@+id/gotologin"
+        android:textColor="#FFFFFF"
+
+
+        />
+
+</LinearLayout>
