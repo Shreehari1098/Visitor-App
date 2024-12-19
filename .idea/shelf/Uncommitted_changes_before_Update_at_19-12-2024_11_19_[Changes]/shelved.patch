@@ -1,0 +1,45 @@
+Index: app/src/main/java/com/example/visitorapp/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.visitorapp;\r\n\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\nimport androidx.activity.EdgeToEdge;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.core.graphics.Insets;\r\nimport androidx.core.view.ViewCompat;\r\nimport androidx.core.view.WindowInsetsCompat;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n\r\n    Button bt1,bt2;\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        EdgeToEdge.enable(this);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        bt1=(Button) findViewById(R.id.Add);\r\n        bt2=(Button) findViewById(R.id.view);\r\n\r\n        bt1.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                Intent i=new Intent(getApplicationContext(),AddVisitor.class);\r\n                startActivity(i);\r\n            }\r\n        });\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/visitorapp/MainActivity.java b/app/src/main/java/com/example/visitorapp/MainActivity.java
+--- a/app/src/main/java/com/example/visitorapp/MainActivity.java	(revision ec0ddb08d72ba863a6e7e2e7c7f870bcfb1a523b)
++++ b/app/src/main/java/com/example/visitorapp/MainActivity.java	(date 1734586153010)
+@@ -31,5 +31,13 @@
+                 startActivity(i);
+             }
+         });
++        bt2.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View v) {
++                Intent i=new Intent(getApplicationContext(),ViewActivity.class);
++                startActivity(i);
++            }
++        });
++
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.VisitorApp\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".AddVisitor\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision ec0ddb08d72ba863a6e7e2e7c7f870bcfb1a523b)
++++ b/app/src/main/AndroidManifest.xml	(date 1734585448779)
+@@ -13,6 +13,9 @@
+         android:theme="@style/Theme.VisitorApp"
+         tools:targetApi="31">
+         <activity
++            android:name=".ViewActivity"
++            android:exported="false" />
++        <activity
+             android:name=".AddVisitor"
+             android:exported="false" />
+         <activity
